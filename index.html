@@ -7,9 +7,11 @@
   <title>NOETIC – Nikolas Alexandrinos</title>
   <style>
     body { margin: 0; font-family: Georgia, serif; background: #f9f9f9; color: #222; }
-    header { background: #111; color: white; padding: 3rem 2rem; text-align: center; }
+    header { background: #111; color: white; padding: 3rem 2rem; text-align: center; position: relative; }
     header h1 { font-size: 3em; margin: 0; }
     header p { font-size: 1.2em; font-style: italic; }
+    .lang-switch { position: absolute; top: 1rem; right: 2rem; }
+    .lang-switch button { margin-left: 0.5rem; font-weight: bold; padding: 0.4rem 0.8rem; }
     nav { text-align: center; background: #eaeaea; padding: 1rem; }
     nav a { margin: 0 1rem; text-decoration: none; color: #333; font-weight: bold; }
     section { padding: 2rem; max-width: 800px; margin: auto; }
@@ -19,59 +21,70 @@
 </head>
 <body>
   <header>
-    <h1>NOETIC</h1>
-    <p>The Logic That Answers the Divine Unanswerable</p>
-    <p style="margin-top: 1rem; font-size: 1em;">by Nikolas Alexandrinos</p>
+    <div class="lang-switch">
+      <button onclick="setLanguage('en')">EN</button>
+      <button onclick="setLanguage('gr')">GR</button>
+    </div>
+    <h1 data-en="NOETIC" data-gr="ΝΟΗΤΙΚΗ">NOETIC</h1>
+    <p data-en="The Logic That Answers the Divine Unanswerable" data-gr="Η Λογική που Απαντά στα Θεϊκά Αναπάντητα">The Logic That Answers the Divine Unanswerable</p>
+    <p style="margin-top: 1rem; font-size: 1em;" data-en="by Nikolas Alexandrinos" data-gr="του Νικόλα Αλεξανδρινού">by Nikolas Alexandrinos</p>
   </header>
 
   <nav>
-    <a href="#works">Works</a>
-    <a href="#reflections">Reflections</a>
-    <a href="#about">About</a>
-    <a href="#join">Join</a>
+    <a href="#works" data-en="Works" data-gr="Έργα">Works</a>
+    <a href="#reflections" data-en="Reflections" data-gr="Σκέψεις">Reflections</a>
+    <a href="#about" data-en="About" data-gr="Βιογραφικό">About</a>
+    <a href="#join" data-en="Join" data-gr="Εγγραφή">Join</a>
   </nav>
 
   <section id="intro">
     <div class="cta">
-      <p><em>"Not logic to explain — but to awaken."</em></p>
-      <p><strong>Explore the writings of a modern contemplative voice.</strong></p>
+      <p data-en="&quot;Not logic to explain — but to awaken.&quot;" data-gr="&quot;Όχι λογική για να εξηγήσει — αλλά για να αφυπνίσει.&quot;">"Not logic to explain — but to awaken."</p>
+      <p data-en="Explore the writings of a modern contemplative voice." data-gr="Εξερεύνησε τα γραπτά μιας σύγχρονης στοχαστικής φωνής.">Explore the writings of a modern contemplative voice.</p>
     </div>
   </section>
 
   <section id="works">
-    <h2>Works</h2>
-    <h3>NOETIC</h3>
-    <p>A poetic-philosophical work exploring inner clarity, divine logic, and noetic awakening.</p>
+    <h2 data-en="Works" data-gr="Έργα">Works</h2>
+    <h3 data-en="NOETIC" data-gr="ΝΟΗΤΙΚΗ">NOETIC</h3>
+    <p data-en="A poetic-philosophical work exploring inner clarity, divine logic, and noetic awakening." data-gr="Ένα ποιητικοφιλοσοφικό έργο που εξερευνά την εσωτερική διαύγεια, τη θεϊκή λογική και την νοητική αφύπνιση.">A poetic-philosophical work exploring inner clarity, divine logic, and noetic awakening.</p>
     <p><a href="#">📖 Read Online</a> | <a href="#">⬇️ Download PDF</a></p>
   </section>
 
   <section id="reflections">
-    <h2>Reflections</h2>
+    <h2 data-en="Reflections" data-gr="Σκέψεις">Reflections</h2>
     <blockquote>
-      <p><em>"The soul doesn’t seek answers. It seeks Wholeness."</em></p>
+      <p data-en="The soul doesn’t seek answers. It seeks Wholeness." data-gr="Η ψυχή δεν ζητά απαντήσεις. Ζητά την Ολότητα.">"The soul doesn’t seek answers. It seeks Wholeness."</p>
     </blockquote>
-    <p>Short reflections, meditations, and inner writings — coming soon.</p>
+    <p data-en="Short reflections, meditations, and inner writings — coming soon." data-gr="Μικρές σκέψεις, διαλογισμοί και εσωτερικά κείμενα — προσεχώς.">Short reflections, meditations, and inner writings — coming soon.</p>
   </section>
 
   <section id="about">
-    <h2>About the Author</h2>
-    <p><strong>Nikolas Alexandrinos</strong> is a Greek thinker, poet, and contemplative writer whose work echoes the ancient light through modern silence.</p>
-    <p>He doesn’t write to argue — but to remember. His language blends mysticism, philosophy, and a stillness that speaks louder than reason.</p>
-    <p>In his world, logic bows before Presence. And truth is not taught — it is mirrored.</p>
+    <h2 data-en="About the Author" data-gr="Σχετικά με τον Συγγραφέα">About the Author</h2>
+    <p data-en="Nikolas Alexandrinos is a Greek thinker, poet, and contemplative writer whose work echoes the ancient light through modern silence." data-gr="Ο Νικόλας Αλεξανδρινός είναι Έλληνας στοχαστής, ποιητής και συγγραφέας πνευματικού λόγου, του οποίου το έργο αντηχεί το αρχαίο φως μέσα από τη σύγχρονη σιωπή.">Nikolas Alexandrinos is a Greek thinker, poet, and contemplative writer whose work echoes the ancient light through modern silence.</p>
+    <p data-en="He doesn’t write to argue — but to remember. His language blends mysticism, philosophy, and a stillness that speaks louder than reason." data-gr="Δεν γράφει για να πείσει — αλλά για να θυμίσει. Η γλώσσα του υφαίνει μυστικισμό, φιλοσοφία και σιωπή που μιλά δυνατότερα από τη λογική.">He doesn’t write to argue — but to remember. His language blends mysticism, philosophy, and a stillness that speaks louder than reason.</p>
   </section>
 
   <section id="join">
-    <h2>Join the Circle</h2>
-    <p>Receive updates, early writings, and luminous thoughts — directly in your inbox.</p>
+    <h2 data-en="Join the Circle" data-gr="Εγγραφή στον Κύκλο">Join the Circle</h2>
+    <p data-en="Receive updates, early writings, and luminous thoughts — directly in your inbox." data-gr="Λάβε ενημερώσεις, πρώιμα κείμενα και φωτεινές σκέψεις — απευθείας στο email σου.">Receive updates, early writings, and luminous thoughts — directly in your inbox.</p>
     <form>
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Your email" required>
-      <button type="submit">Subscribe</button>
+      <input type="text" placeholder="Your name / Το όνομά σου" required>
+      <input type="email" placeholder="Your email / Το email σου" required>
+      <button type="submit" data-en="Subscribe" data-gr="Εγγραφή">Subscribe</button>
     </form>
   </section>
 
   <footer>
     &copy; 2025 Nikolas Alexandrinos. All rights reserved.
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      document.querySelectorAll('[data-en]').forEach(el => {
+        el.textContent = el.getAttribute(`data-${lang}`);
+      });
+    }
+  </script>
 </body>
 </html>
